@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour hassounds="0" appversion="7.1.10" apprev="21009" start="node4">
+  <panorama id="node4">
+    <input levelbiashidpi="1.000" height="3000" levelbias="0.400" levelingpitch="0" overlap="1" width="3000" leveltilesize="510" levelingroll="0" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level preload="0" predecode="0" width="3000" height="3000"/>
+      <level preload="0" predecode="0" width="1500" height="1500"/>
+      <level preload="0" predecode="0" width="750" height="750"/>
+      <level preload="1" predecode="1" width="375" height="375"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="2" pannorth="0">
+      <start tilt="0" fov="100" projection="4" pan="0"/>
+      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
+      <min tilt="-40.3579" pan="-180" fovpixel="2"/>
+      <max tilt="40.3579" fovfisheye="360" fov="140" pan="180" fovstereographic="330"/>
+    </view>
+    <userdata tags="Downloads" longitude="" title="Дизайн без названия - 1" author="Vess" datetime="" comment="" copyright="" heading="0" nodeid="node4" latitude="" description="" source="" info="" customnodeid=""/>
+    <hotspots width="180" wordwrap="1" height="20" smoothmovement="0">
+      <label textcolor="0x000000" height="20" textalpha="1" borderalpha="1" background="1" bordercolor="0x000000" backgroundalpha="1" border="1" borderradius="1" width="180" wordwrap="1" enabled="1" backgroundcolor="0xffffff"/>
+      <polystyle mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomfov="40" blendtime="1" softedge="0" zoomspeed="2" zoomoutpause="1" zoomafteroutfov="40" zoomafterinfov="140" zoomout="0" blendcolor="0x000000" enabled="1" delay="none" zoomin="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0" clipsrandom="0"/>
+    <control speedwheel="1" invertcontrol="1" lockedwheel="0" zoomcentercursor="1" lockedkeyboardzoom="0" rubberband="0" dblclickfullscreen="0" hideabout="0" lockedmouse="0" simulatemass="1" contextvr="1" invertwheel="0" contextfullscreen="1" contextprojections="0" sensitivity="8" lockedkeyboard="0"/>
+  </panorama>
+  <masternode>
+    <userdata copyright="" tags="" title="" description="" author="" comment=""/>
+    <animationsequences>
+      <sequence title="Animation01"/>
+    </animationsequences>
+  </masternode>
+</tour>
