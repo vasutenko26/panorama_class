@@ -6,9 +6,10 @@ body {
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 40px;
+    margin: 20px 0 40px;
 }
 
 .room-btn {
