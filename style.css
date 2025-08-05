@@ -1,7 +1,47 @@
+ :root {
+    --color-bg-start: #74ebd5;
+    --color-bg-end: #9face6;
+    --color-card-bg: rgba(255, 255, 255, 0.15);
+    --color-btn-bg: rgba(255, 255, 255, 0.8);
+    --color-btn-hover: #ffffff;
+    --color-text: #333;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
     text-align: center;
     padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
+    background-size: 400% 400%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: gradient-move 15s ease infinite, fade-in 1s ease-in;
+}
+
+h1, h2 {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: slide-down 0.7s ease;
+}
+
+.floor {
+    background: var(--color-card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floor:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .buttons {
@@ -9,19 +49,58 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin: 20px 0 40px;
+    margin-top: 15px;
 }
 
 .room-btn {
+    position: relative;
+    overflow: hidden;
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 15px 25px;
+    background: var(--color-btn-bg);
+    color: var(--color-text);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+}
+
+.room-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
 }
 
 .room-btn:hover {
-    background-color: #45a049;
+    background-color: var(--color-btn-hover);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.room-btn:hover::after {
+    left: 100%;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-down {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
